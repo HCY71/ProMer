@@ -28,7 +28,7 @@ export const useFirestore = (collection) => {
   const [ isCancelled, setIsCancelled ] = useState(false)
 
   // collection ref
-  const ref = projectDb.collection()
+  const ref = projectDb.collection(collection)
 
   // only dispatch is not cancelled
   const dispatchIfNotCancelled = (action) => {
